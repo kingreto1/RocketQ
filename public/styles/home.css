@@ -1,0 +1,126 @@
+.content {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 11.4rem 1fr;
+
+    grid-template-areas:
+    'header header'
+    'left right'
+}
+
+header {
+    grid-area: header;
+}
+
+#bg {
+    grid-area: left;
+
+    background: url(../images/home-bg-img.svg) no-repeat top/contain;
+    background-position: -10rem;
+}
+
+main {
+    margin-top: -12rem;
+    grid-area: right;
+
+    display: flex;
+    align-items: center;
+}
+
+main .container {
+    
+    width: min(36.3rem, 100%)
+}
+
+main h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+    font-size: clamp(20px, 5vw, 2.8rem);
+    margin-bottom: 2.4rem;
+}
+
+input, button, .button {
+    width: 100%;
+}
+
+input {
+    
+    padding: 13px 12px 13px 16px;
+    border: 2px solid var(--grey-blue);
+    margin-bottom: 1.8rem;
+}
+
+button {
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+
+    background-color: var(--blue);
+    color: var(--white);
+
+    padding: auto 11.6rem;
+}
+
+.button {
+    border: 2px solid var(--blue);
+    color: var(--blue);
+}
+
+.content header {
+    width: 80%;
+    margin: 3.5rem auto;
+}
+
+.content header img{
+    width: 16.7rem;
+}
+
+
+/* Separator line */
+
+.separator {
+    margin: 3rem 0 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.separator div:nth-child(2){
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: var(--grey-blue)
+}
+
+.separator div:nth-child(1), 
+.separator div:nth-child(3) {
+    background: var(--grey-blue);
+    width: 45%;
+    height: 1px;
+}
+
+
+/* BALLS */
+
+.ball {
+    background: var(--blue);
+    clip-path: circle(50% at 50% 50%);
+    position: fixed;
+}
+
+.ball.top {
+    width: 63.4rem;
+    height: 63.4rem;
+
+    top: -38.5rem;
+    right: -40.5rem;
+    opacity: .1;
+}
+
+.ball.bottom {
+    width: 21.2rem;
+    height: 21.2rem;
+
+    bottom: -14.8rem;
+    right: 5.6rem;
+    opacity: .1;
+}

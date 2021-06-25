@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+    resize: none;
+}
+
+
+html {
+    --black: #0D114F;
+    --white: #FAFAFA;
+    --red: #E83F5B;
+    --light-blue: #E0ECFF;
+    --blue: #3485FF;
+    --background: #FBFCFF;
+    --overlay: #040911;
+    --icons-details: #A5B0C1;
+
+    --grey-dark: #4D5E77;
+    --grey-blue: #A1B2CD;
+    --grey-medium: #D3D9E2;
+    --grey-light: #E5EAF1;
+
+    --hover-red: #EA4B65;
+    --hover-blue:#5699FF;
+    --hover-grey: #8794A7;
+
+    --read: #4d5e771a;
+
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background: var(--white);
+}
+
+body, button, input, textarea {
+    font-size: clamp(14px, 1.6rem, 2vw);
+
+    font-family: 'Open-sans', sans-serif;
+}
+
+.content {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/*------- INPUTS AND BUTTONS -------*/
+input, button, .button {
+    height: 5rem;
+    border-radius: .8rem;
+}
+
+button, .button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    line-height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor:pointer;  
+    
+    transition: filter .2s;
+
+    width: min(36.3rem, 100%);
+}
+
+button:hover, .button:hover {
+    filter: brightness(1.2)
+}
+
+button > img,
+.button > img {
+    margin-right: 1rem;
+    width: 2rem;
+}
+
+button.outlined,
+.button.outlined {
+    border: .2rem solid var(--blue);
+    color: var(--blue);
+}
+

@@ -1,0 +1,290 @@
+header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--black);
+    font-size: clamp(20px, 5vw, 2.8rem);
+    margin-bottom: 2.4rem;
+    margin-top: 6.4rem;
+}
+
+.content {
+    max-width: min(112rem, 90vw);
+    margin-top: 3.2rem;
+
+}
+
+#buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button.button2{
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+
+    background-color: var(--blue);
+    color: var(--white);
+
+    padding: auto 11.6rem;
+}
+
+.button1 {
+    padding-left: 1rem;
+    width: 13.4rem;
+    margin-left: .8rem;
+    padding: 1rem auto;
+}
+
+.button1 > img {
+    margin-left: 1.1rem;
+}
+
+.button2 {
+    width: 17.3rem;
+    margin-left: .8rem;
+}
+
+
+
+textarea {
+    background: var(--white);    
+    border: none;  
+    width: 100%;  
+}
+
+#question-form form{
+    border: .3rem solid var(--grey-blue);
+    border-radius: 0 .8rem .8rem;
+    padding: 1.2rem 1.6rem;
+    margin-bottom: 1.6rem;
+}
+
+.submit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.submit div input {
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+
+    background-color: var(--blue);
+    color: var(--white);
+
+    padding: auto 11.6rem;
+
+    width: 9.8rem;
+    height: 4rem;
+}
+
+.lock {
+    color: var(--grey-medium);
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+#no-questions {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    margin-top: 5.2rem;
+    
+}
+
+#no-questions h2 {
+    margin: 0;
+    margin-top:1.2rem;
+    font-size: 1.8rem;
+}
+
+#no-questions p {
+    margin-top: 1.3rem;
+    font-size: 1.4rem;
+    font-family: 'Open-sans', sans-serif;
+    color: var(--grey-dark);
+    text-align: center;
+    font-weight: 400;
+}
+
+.question-wrapper { 
+    width: 100%;
+    min-height: 13.6rem;
+    background: var(--light-blue);
+    border-radius: 0 .8rem .8rem;
+    box-shadow: .1rem .3rem .3rem rgba(0, 0, 0,.4);
+    margin-bottom: .8rem;
+
+    padding: 2.4rem;
+}
+
+.question-wrapper.read {
+    box-shadow: none;
+    background: var(--read);
+}
+
+.question-wrapper .question-content {
+    display: flex;
+    align-items: flex-start;
+}
+
+.question-wrapper .question-content .user {
+    background: var(--blue);
+    clip-path: circle();
+    padding: 1.4rem;
+}
+
+.question-wrapper .question-content p {
+    display: flex;
+    word-break: break-word;
+    align-items: center;
+    min-height: 5.5rem;
+}
+
+.question-wrapper.read .question-content .user {
+    background: var(--grey-blue);
+    clip-path: circle();
+    padding: 1.4rem;
+}
+
+.question {
+    color: var(--black);
+    margin-left: 1.6rem;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+}
+
+.actions .checked-question,
+.actions .delete-question {
+    color: var(--grey-dark);
+    display: flex;
+    align-items: center;
+}
+
+.actions .checked-question:hover,
+.actions .delete-question:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.actions .checked-question img,
+.actions .delete-question img {
+    margin-right: .8rem;
+}
+
+.actions a + a {
+    margin-left: 2.4rem;
+}
+
+
+
+/*========= MODAL =========*/
+
+#modal{
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(4, 9, 17, .8);
+    z-index: 999;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+#modal.active {
+    opacity: 1;
+    visibility:visible;
+}
+
+.modal-content {
+    text-align: center;
+    border-radius: .8rem;
+    background: var(--white);
+    width: 59rem;
+    height: 36.2rem
+}
+
+#modal h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 3.4rem;
+}
+
+#modal p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.6rem;
+    color: var(--grey-dark);
+}
+
+#modal input {
+    padding: 1rem;
+    border: .3rem solid var(--blue);
+    color: var(--black);
+    cursor: auto;
+    width: 30rem;
+    height: 4.8rem;
+}
+
+.grid-buttons {
+    display: grid;
+    place-items: center;    
+    margin-top: 2.4rem;
+    width:100%;
+}
+
+.buttons {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-row: 2;
+    margin-top: 4rem;
+}
+
+.button.cancel {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    background: var(--grey-light);
+    color: var(--grey-dark);
+    margin-right: .8rem;
+}
+
+.button.delete {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    background: var(--red);
+    color: var(--white);
+}
+
+.button.delete:hover,
+.button.cancel:hover {
+    filter: brightness(1);
+}
+
+
+
+
+
